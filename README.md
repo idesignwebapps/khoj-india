@@ -1,5 +1,3 @@
 # khoj-india
 
-22.04.2023
-decision made on using a non-angular approach
-using html css php mysql approach - non CMS
+Khoj India is a major project initiative by Adi for M.A Web Design and Content Planning Course, University of Greenwich - London
