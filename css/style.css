@@ -64,12 +64,12 @@ table {
     --light-pink: #e43397;
     --white: #ffffff;
     --black: #000000;
-
-    --clr-primary-200: #f3eed9;
-    --clr-primary-400: red;
-
+    --clr-primary-400: #d42487;
     --clr-neutral-100: #fff;
     --clr-neutral-900: #222c2a;
+
+    --ff-primary: "Overpass", sans-serif;
+    --ff-accent: "League Gothic", sans-serif;
 }
 
 *, *::before, *::after {
@@ -78,7 +78,7 @@ table {
 
 body {
     background: var(--light-pink);
-    font-family: 'Overpass', sans-serif;
+    font-family: var(--ff-primary);
 }
 
 /* navigation styles start here */
@@ -93,13 +93,11 @@ header {
 }
 
 h1 {
-    font-family: 'League Gothic', sans-serif;
+    font-family: var(--ff-accent);
     text-transform: uppercase;
     font-size: 3rem;
 }
 
-/* changed this from the tutorial video to
-   allow it to gain focus, making it tabbable */
 .nav-toggle {
     position: absolute !important;
     top: -9999px !important;
@@ -174,7 +172,7 @@ nav li:first-of-type {
 }
 
 nav a {
-    color: var(--yellow);
+    color: var(--accent);
     text-decoration: none;
     font-size: 2rem;
     font-weight: 600;
@@ -188,6 +186,7 @@ nav a:hover {
 
 .nav-toggle:checked~nav {
     transform: scale(1, 1);
+    background-color: var(--yellow);
 }
 
 .nav-toggle:checked~nav a {
@@ -195,20 +194,33 @@ nav a:hover {
     transition: opacity 250ms ease-in-out 250ms;
 }
 
+h2 {
+    font-family: var(--ff-accent);
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.container--narrow>h2 {
+    font-size: 4rem;
+}
+
 h2, h3 {
     color: var(--clr-primary-400);
     font-family: var(--ff-accent);
     font-weight: 900;
     line-height: 1;
+    margin-bottom: 1rem;
 }
 
-h2, h3, p {
-    margin-bottom: 1em;
+main p:first-of-type {
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 img {
     display: block;
     max-width: 100%;
+    border-radius: 5px;
 }
 
 .text-center {
@@ -217,6 +229,10 @@ img {
 
 section {
     padding: 4rem 0;
+}
+
+section:first-of-type {
+    padding: 9rem 0 3rem 0;
 }
 
 .container {
@@ -230,11 +246,11 @@ section {
 }
 
 .container--narrow {
-    max-width: 34rem;
+    max-width: 38rem;
 }
 
 .bg-light {
-    background-color: var(--clr-primary-200);
+    background-color: var(--yellow);
 }
 
 .bg-primary {
@@ -249,7 +265,7 @@ section {
 
 .bg-primary h2,
 .bg-dark h2 {
-    color: var(--clr-primary-200);
+    color: var(--yellow);
 }
 
 @media screen and (min-width: 60em) {
@@ -262,8 +278,21 @@ section {
         grid-template-columns: 1fr auto minmax(700px, 5fr) 1fr;
     }
 
+    main p:first-of-type {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
     h1 {
         font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 5rem;
+    }
+
+    .container--narrow>h2 {
+        font-size: 8rem;
     }
 
     .logo {
@@ -328,6 +357,10 @@ section {
 
     section {
         padding: 7rem 0;
+    }
+
+    section:first-of-type {
+        padding: 12rem 0 5rem 0;
     }
 
     .split {
