@@ -64,9 +64,7 @@ table {
     --light-pink: #e43397;
     --white: #ffffff;
     --black: #000000;
-    --clr-primary-400: #d42487;
-    --clr-neutral-100: #fff;
-    --clr-neutral-900: #222c2a;
+    --dark-gray: #222c2a;
 
     --ff-primary: "Overpass", sans-serif;
     --ff-accent: "League Gothic", sans-serif;
@@ -205,7 +203,7 @@ h2 {
 }
 
 h2, h3 {
-    color: var(--clr-primary-400);
+    color: var(--dark-pink);
     font-family: var(--ff-accent);
     font-weight: 900;
     line-height: 1;
@@ -249,18 +247,23 @@ section:first-of-type {
     max-width: 38rem;
 }
 
+.bg-white {
+    background-color: var(--white);
+    color: var(--accent);
+}
+
 .bg-light {
     background-color: var(--yellow);
 }
 
 .bg-primary {
-    color: var(--clr-neutral-100);
-    background-color: var(--clr-primary-400);
+    color: var(--white);
+    background-color: var(--dark-pink);
 }
 
 .bg-dark {
-    color: var(--clr-neutral-100);
-    background-color: var(--clr-neutral-900);
+    color: var(--white);
+    background-color: var(--dark-gray);
 }
 
 .bg-primary h2,
