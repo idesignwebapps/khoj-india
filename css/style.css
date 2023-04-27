@@ -59,6 +59,7 @@ table {
 
 :root {
     --yellow: #ffc500;
+    --light-yellow: #ffd02e;
     --accent: #5c21b5;
     --dark-pink: #d42487;
     --light-pink: #e43397;
@@ -151,7 +152,7 @@ nav {
     width: 100%;
     transform: scale(1, 0);
     transform-origin: top;
-    transition: transform 400ms ease-in-out;
+    transition: transform 300ms ease-in-out;
 }
 
 nav ul {
@@ -182,9 +183,13 @@ nav a:hover {
     color: var(--black);
 }
 
+nav a span {
+    margin-right: 5px; 
+}
+
 .nav-toggle:checked~nav {
     transform: scale(1, 1);
-    background-color: var(--yellow);
+    background-color: var(--light-yellow);
 }
 
 .nav-toggle:checked~nav a {
@@ -229,8 +234,36 @@ section {
     padding: 4rem 0;
 }
 
-section:first-of-type {
-    padding: 9rem 0 3rem 0;
+main section:first-of-type {
+    padding: 9rem 0 4rem 0;
+    position: relative;
+    isolation: isolate;
+    background-color: var(--black);
+}
+
+main section:first-of-type::after {
+    content: '';
+    inset: 0;
+    z-index: -1;
+    opacity: 0.25;
+    background-image: url(../img/rishikesh-1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+section:nth-of-type(2), section:nth-of-type(4) {
+    background-image: url(../img/floral-yellow.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top -32em right -35em;
+}
+
+section:nth-of-type(3) {
+    background-image: url(../img/floral-pink.svg), url(../img/feather.svg);
+    background-repeat: no-repeat;
+    background-size: 50%, 25%;
+    background-position: top -32em left -35em, top 10em right -10em;
 }
 
 .container {
@@ -241,6 +274,7 @@ section:first-of-type {
 .split {
     display: flex;
     flex-direction: column;
+    gap: 2.5em;
 }
 
 .container--narrow {
@@ -271,6 +305,92 @@ section:first-of-type {
     color: var(--yellow);
 }
 
+footer {
+    background-image: url(../img/floral-yellow.svg), url(../img/letter-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 50%, 25%;
+    background-position: top -32em left -40em, top 1em right -5em;
+    background-color: var(--accent);
+    padding: 1em 0 4em 0;
+}
+
+#footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer section {
+    width: 100%;
+    padding: 0 15px;
+    margin-top: 2em;
+}
+
+footer section h4 {
+    font-size: 2rem;
+    color: var(--yellow);
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+footer section h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    background-color: var(--dark-pink);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+footer section ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+footer section ul li a {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+footer section ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+footer section .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+footer section .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+@media screen and (min-width: 30em) {
+    footer section {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+
 @media screen and (min-width: 60em) {
     .nav-toggle-label {
         display: none;
@@ -278,7 +398,7 @@ section:first-of-type {
 
     header {
         display: grid;
-        grid-template-columns: 1fr auto minmax(700px, 5fr) 1fr;
+        grid-template-columns: 1fr auto minmax(850px, 5fr) 1fr;
     }
 
     main p:first-of-type {
@@ -292,6 +412,10 @@ section:first-of-type {
 
     h2 {
         font-size: 5rem;
+    }
+
+    .container--narrow {
+        margin-top: 4em;
     }
 
     .container--narrow>h2 {
@@ -362,7 +486,8 @@ section:first-of-type {
         padding: 7rem 0;
     }
 
-    section:first-of-type {
+    main section:first-of-type {
+        min-height: 42rem;
         padding: 12rem 0 5rem 0;
     }
 
@@ -378,5 +503,8 @@ section:first-of-type {
         margin-left: 2em;
     }
 
+    footer section {
+        width: 25%;
+    }
 
 }
