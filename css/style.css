@@ -158,10 +158,12 @@ h1 {
 
 nav {
     position: absolute;
-    text-align: left;
+    text-align: right;
     top: 100%;
-    left: 0;
-    width: 100%;
+    right: 0;
+    padding-right: 1rem;
+    border-bottom-left-radius: 25px;
+    max-width: 70%;
     transform: scale(1, 0);
     transform-origin: top;
     transition: transform 300ms ease-in-out;
@@ -185,7 +187,7 @@ nav li:first-of-type {
 nav a {
     color: var(--accent);
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 500;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
@@ -556,6 +558,7 @@ footer p>a:hover {
     }
 
     nav a {
+        font-size: 1.8rem;
         color: var(--accent);
         opacity: 1;
         position: relative;
