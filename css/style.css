@@ -89,12 +89,25 @@ header {
     position: fixed;
     z-index: 999;
     width: 100%;
+    min-height: 5em;
 }
 
 h1 {
+    display: none;
     font-family: var(--ff-accent);
     text-transform: uppercase;
     font-size: 3rem;
+}
+
+.logo {
+    position: relative;
+}
+
+.logo img {
+    position: absolute;
+    top: -3em;
+    right: 1em;
+    max-width: 130px;
 }
 
 .nav-toggle {
@@ -148,7 +161,6 @@ nav {
     text-align: left;
     top: 100%;
     left: 0;
-    background: var(--background);
     width: 100%;
     transform: scale(1, 0);
     transform-origin: top;
@@ -184,7 +196,7 @@ nav a:hover {
 }
 
 nav a span {
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 .nav-toggle:checked~nav {
@@ -220,7 +232,7 @@ main p:first-of-type {
     font-weight: 500;
 }
 
-img {
+main img {
     display: block;
     max-width: 100%;
     border-radius: 5px;
@@ -246,7 +258,7 @@ main section:first-of-type::after {
     inset: 0;
     z-index: -1;
     opacity: 0.25;
-    background-image: url(../img/rishikesh-1.jpg);
+    background-image: url(../img/gurez-valley-2.jpg);
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -399,6 +411,7 @@ footer section .social-links a:hover {
     header {
         display: grid;
         grid-template-columns: 1fr auto minmax(850px, 5fr) 1fr;
+        min-height: 6em;
     }
 
     main p:first-of-type {
@@ -406,8 +419,10 @@ footer section .social-links a:hover {
         font-weight: 500;
     }
 
-    h1 {
-        font-size: 4rem;
+    .logo img {
+        top: -4.2em;
+        left: -6em;
+        max-width: 180px;
     }
 
     h2 {
@@ -491,8 +506,16 @@ footer section .social-links a:hover {
         padding: 12rem 0 5rem 0;
     }
 
+    main img {
+        max-width: 650px;
+    }
+
     .split {
         flex-direction: row;
+    }
+
+    .bg-white .split {
+        flex-direction: column;
     }
 
     .split>* {
@@ -501,6 +524,14 @@ footer section .social-links a:hover {
 
     .split>*+* {
         margin-left: 2em;
+    }
+
+    .bg-white .split>div:nth-of-type(2) {
+        margin: 0 auto;
+    }
+
+    .bg-white .split>div>img {
+        max-width: 900px;
     }
 
     footer section {
