@@ -437,6 +437,23 @@ footer section .social-links a img {
     width: 40px;
 }
 
+footer p {
+    font-size: 1.1rem;
+    color: var(--light-yellow);
+    text-align: center;
+    margin-top: 2em;
+}
+
+footer p>a {
+    text-decoration: underline;
+    color: var(--light-yellow);
+    transition: all 300ms;
+}
+
+footer p>a:hover {
+    color: var(--white);
+}
+
 @media screen and (min-width: 30em) {
     footer section {
         width: 50%;
