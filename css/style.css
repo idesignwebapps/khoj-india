@@ -286,21 +286,32 @@ section {
 }
 
 main section:first-of-type {
-    padding: 9rem 0 4rem 0;
     position: relative;
+    overflow: hidden;
     isolation: isolate;
-    background-color: var(--black);
 }
 
-main section:first-of-type::after {
-    content: '';
-    inset: 0;
-    z-index: -1;
-    opacity: 0.25;
-    background-image: url(../img/gurez-valley-2.jpg);
-    background-size: cover;
-    background-position: center;
+@keyframes pan-image {
+    from {
+        transform: scale(3);
+    }
+
+    to {
+       transform: scale(5);
+    }
+}
+
+main section:first-of-type>img {
     position: absolute;
+    left: 30%;
+    top: 40%;
+    z-index: -1;
+    filter: brightness(0.3);
+    animation: pan-image 30s linear infinite;
+}
+
+main section:first-of-type p {
+    margin-top: 5rem;
 }
 
 main section:first-of-type a {
@@ -308,6 +319,7 @@ main section:first-of-type a {
     font-weight: 700;
     background-color: #ffffffb0;
     padding: 0.3rem 0.8rem;
+    margin-bottom: 4rem;
     border-radius: 50px;
     text-decoration: none;
 }
@@ -317,13 +329,6 @@ main section:first-of-type a>img {
     display: inline;
     height: 20px;
     width: 20px;
-}
-
-section:nth-of-type(2), section:nth-of-type(4) {
-    background-image: url(../img/floral-yellow.svg);
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: top -32em right -35em;
 }
 
 section:nth-of-type(3) {
@@ -423,10 +428,10 @@ section:nth-of-type(4) a>img {
 }
 
 footer {
-    background-image: url(../img/floral-yellow.svg), url(../img/letter-pattern.svg);
+    background-image: url(../img/floral-yellow.svg);
     background-repeat: no-repeat;
-    background-size: 50%, 25%;
-    background-position: top -32em left -40em, top 1em right -5em;
+    background-size: 60%;
+    background-position: top -55em right -32em;
     background-color: var(--accent);
     padding: 1em 0 4em 0;
 }
