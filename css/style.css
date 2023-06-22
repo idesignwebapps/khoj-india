@@ -221,9 +221,11 @@ nav li:first-of-type {
 }
 
 nav a {
+    display: flex;
+    align-items: center;
     color: var(--accent);
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
@@ -234,7 +236,8 @@ nav a:hover {
 }
 
 nav a span {
-    margin-right: 5px;
+    margin-bottom: 0.2em;
+    margin-right: 0.2em;
 }
 
 .nav-toggle:checked~nav {
@@ -348,11 +351,13 @@ section:nth-of-type(2) p, section:nth-of-type(4) p {
 
 section:nth-of-type(4) .material-symbols-outlined {
     font-size: 3rem;
-    display: block;
     margin-bottom: 0.8rem;
+    margin-right: 0.2em;
 }
 
 section:nth-of-type(4) h2~p {
+    display: flex;
+    align-items: center;
     margin-top: 0.8em;
 }
 
