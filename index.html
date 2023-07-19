@@ -6,21 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khoj India | Home Page</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Overpass:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
 </head>
 
 <body>
+    <header>
+        <h1>Khoj</h1>
+        <div class="logo">
+            <img src="./images/khoj-logo-7.png" alt="khoj india logo">
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#"><span class="material-symbols-outlined">
+                            home
+                        </span>Home</a>
+                </li>
+                <li><a href="./locations.html"><span class="material-symbols-outlined">
+                            category
+                        </span>Locations</a>
+                </li>
+                <li><a href="#"><span class="material-symbols-outlined">
+                            featured_play_list
+                        </span>Featurette</a>
+                </li>
+                <li><a href="#"><span class="material-symbols-outlined">
+                            info
+                        </span>About</a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>
     <main id="home">
         <h2>Khoj India Prototype</h2>
         <p>Homepage Under Works</p>
         <p>Visit Location Page</p>
-        <a href="./location.html">Click for Location Prototype</a>
+        <a href="./locations-single.html">Click for Location Prototype</a>
     </main>
+    <footer>
+        <div class="container">
+            <div id="footer-wrapper">
+                <section>
+                    <h4>Khoj India</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our goal</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">crowdsourcing data</a></li>
+                        <li><a href="#">apply for featurette</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><img src="./images/instagram.png" alt=""></a>
+                        <a href="#"><img src="./images/discord.png" alt=""></a>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <p>All Rights Reserved &hyphen; <a href="https://www.linkedin.com/in/aditya-jain26" target="_blank">Adi Jain</a>
+            &copy; 2022-2023</p>
+    </footer>
 </body>
 
 </html>
