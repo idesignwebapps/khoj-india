@@ -264,7 +264,7 @@ h2 {
 h2, h3 {
     color: var(--dark-pink);
     font-family: var(--ff-accent);
-    font-weight: 900;
+    font-weight: 500;
     line-height: 1;
     margin-bottom: 0.8rem;
 }
