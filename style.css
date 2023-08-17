@@ -575,10 +575,10 @@ footer section {
 }
 
 footer section h4 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--yellow);
     text-transform: capitalize;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     font-weight: 500;
     position: relative;
 }
@@ -599,7 +599,7 @@ footer section ul li:not(:last-child) {
 }
 
 footer section ul li a {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-transform: capitalize;
     text-decoration: none;
     font-weight: 300;
@@ -922,6 +922,14 @@ footer p>a:hover {
 
     footer section {
         width: 25%;
+    }
+
+    footer section h4 {
+        font-size: 2rem;
+    }
+
+    footer section ul li a {
+        font-size: 1.5rem;
     }
 
 }
