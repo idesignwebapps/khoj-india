@@ -289,11 +289,11 @@ main section:first-of-type>img {
     animation: pan-image 30s linear infinite;
 }
 
-main section:first-of-type p {
+main section:first-of-type .container--narrow p {
     margin-top: 5rem;
 }
 
-main section:first-of-type a {
+main section:first-of-type .container--narrow a {
     color: var(--dark-gray);
     font-weight: 700;
     background-color: #ffffffb0;
@@ -393,6 +393,18 @@ section:nth-of-type(4) a>img {
 .container {
     margin-inline: auto;
     width: min(90%, 70.5rem);
+}
+
+.home-page {
+    padding-inline: 2rem;
+}
+
+.home-page h2 {
+    margin-top: 4rem;
+}
+
+.home-page > img {
+    animation: unset;
 }
 
 .split {
@@ -759,7 +771,7 @@ footer p>a:hover {
         padding: 12rem 0 5rem 0;
     }
 
-    main section:first-of-type a {
+    main section:first-of-type .container--narrow a {
         background: none;
         font-weight: 500;
         color: var(--white);
@@ -773,7 +785,7 @@ footer p>a:hover {
         width: 25px;
     }
 
-    main section:first-of-type a:hover {
+    main section:first-of-type .container--narrow a:hover {
         color: var(--dark-gray);
         font-weight: 700;
         background-color: #ffffffb0;
